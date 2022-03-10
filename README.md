@@ -1,19 +1,10 @@
-# myapp
+# UI5 Web Component Enablement
 
-## Description
+This project shows the usage of the UI5 Web Components wrapper controls in OpenUI5. It uses the UI5 tooling to serve the UI5 libraries and makes use of the UI5 TypeScript support to create the application. Within the application, the wrapper controls are used in an `XMLView` and the corresponding controller.
 
-This app demonstrates a TypeScript setup for developing UI5 applications.
+![Environment](./doc/env.jpg)
 
-**The template is inspired by the [`SAP-samples/ui5-typescript-helloworld`](https://github.com/SAP-samples/ui5-typescript-helloworld) project which also contains [a detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md). It explains how this setup is created and how all the bits and pieces fit together.**
-
-| :point_up: Overview of TypeScript-related Entities |
-|:---------------------------|
-| The UI5 type definitions (`*.d.ts` files) are loaded as dev dependency from [npm](https://www.npmjs.com/package/@openui5/ts-types-esm). They are a work in progress, so while they should be working well already, we are still improving them, which might also lead to breaking changes. |
-| The file [tsconfig.json](tsconfig.json) contains the configuration for the TypeScript compilation, including a reference to the UI5 `*.d.ts` files. |
-| Normally, the UI5 JavaScript files (controllers, Component.js etc.) would reside in the `webapp` folder. Now they are in the [src](src) folder. The TypeScript compilation will create the `webapp` folder and put all output there. |
-| In addition to the TypeScript compilation, there is also a conversion from the ES6 module and class syntax used in the source files to the classic UI5 module loading and class definition syntax (`sap.ui.define(...)` and `superClass.extend(...)`). This conversion is using the [babel-plugin-transform-modules-ui5](https://github.com/r-murphy/babel-plugin-transform-modules-ui5) project from Ryan Murphy. |
-| Both, the TypeScript compilation and the ES6 syntax transformation, are executed by Babel, as configured in the file [.babelrc.json](.babelrc.json) |
-| This combined transformation is triggered by both the `build:ts` and `watch:ts` scripts in [package.json](package.json). |
+The project is based on the Yeoman generator easy-ui5 to kick-start your TypeScript UI5 application. All different pieces play well together: the Easy-UI5 generator, the UI5 Community templates, the OpenUI5 programming model, TypeScript, and most important here the UI5 Web Components inside OpenUI5.
 
 ## Requirements
 
@@ -40,10 +31,6 @@ npm start
 As shown in the terminal after executing this command, the app is then running on http://localhost:8080/index.html. A browser window with this URL should automatically open.
 
 (When using yarn, do `yarn start` instead.)
-
-## Debug the App
-
-In the browser, you can directly debug the original TypeScript code, which is supplied via sourcemaps (need to be enabled in the browser's developer console if it does not work straight away). If the browser doesn't automatically jump to the TypeScript code when setting breakpoints, use e.g. `Ctrl`/`Cmd` + `P` in Chrome to open the `*.ts` file you want to debug.
 
 ## Build the App
 
@@ -106,7 +93,6 @@ npm run lint
 ## References
 
 Once you have understood the setup and want to inspect the code of a slightly more comprehensive UI5 app written in TypeScript, you can check out the [TypeScript version of the UI5 CAP Event App Sample](https://github.com/SAP-samples/ui5-cap-event-app/tree/typescript).
-
 
 ## License
 
