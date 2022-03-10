@@ -18,7 +18,7 @@ export default class Component extends UIComponent {
 		super.init();
 
 		// create the views based on the url/hash
-		this.getRouter().initialize();
+		//this.getRouter().initialize();
 	}
 
 	/**

@@ -1,9 +1,20 @@
 <mvc:View
 	controllerName="com.myorg.myapp.controller.App"
 	displayBlock="true"
-	xmlns="sap.m"
+	xmlns="sap.ui.webc.main"
+	xmlns:layout="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc">
 
-	<App id="app" />
+	<Panel>
+		<header>
+			<Label text="UI5 Web Components Enablement"/>
+		</header>
+		<layout:VerticalLayout width="100%">
+			<Input id="myInput" value="Enter your text here!" width="100%"/>
+			<Button text="Don't click me!" click="onClick" width="100%"/>
+		</layout:VerticalLayout>
+	</Panel>
+
+	<Toast id="myToast"/>
 
 </mvc:View>
